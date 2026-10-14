@@ -267,6 +267,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 /* ---------- Équipe : grandes cartes blanches ---------- */
 .sd-member { display: flex; flex-direction: column; }
+.sd-member-head { display: flex; gap: 1.2rem; align-items: center; margin-bottom: 0.4rem; }
+.sd-member-head .sd-portrait { width: 84px; height: 84px; flex: 0 0 84px; font-size: 1.5rem; border-radius: 20px; margin-bottom: 0; }
+.sd-member-head h3 { font-size: 1.4rem; }
+.sd-member-sec { border-top: 1px solid var(--line); margin-top: 1.1rem; padding-top: 1rem; }
+.sd-member-sec-title { font-family: var(--font-title); font-size: 0.76rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mut); margin: 0 0 0.6rem; }
+.sd-member-sec .sd-tags { margin: 0; }
+.sd-member-sec .sd-card-desc { margin: 0; }
+.sd-member-sec .sd-edu:last-child { margin-bottom: 0; }
 .sd-portrait {
   width: 104px; height: 104px; border-radius: 26px;
   display: flex; align-items: center; justify-content: center;
@@ -282,8 +290,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .sd-tags { list-style: none; padding: 0; margin: 0.9rem 0 0.4rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .sd-tags li { font-size: 0.82rem; font-weight: 500; border: 1px solid var(--line); border-radius: 999px; padding: 0.32rem 0.85rem; color: var(--ink-soft); }
 .sd-tags--small li { font-size: 0.78rem; padding: 0.25rem 0.7rem; }
-.sd-member-actions { display: grid; gap: 0.7rem; margin-top: 1.3rem; }
-.sd-member-actions .btn-ink, .sd-member-actions .btn-outline { width: 100%; }
+.sd-member-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin-top: 1.3rem; }
+.sd-member-actions .btn-ink, .sd-member-actions .btn-outline { width: 100%; padding-left: 0.6rem; padding-right: 0.6rem; }
 .sd-placeholder-note { color: var(--mut); font-size: 0.88rem; margin-top: 1.8rem; text-align: center; }
 .sd-placeholder-note code, .sd-contact-box code { background: var(--mist); color: var(--ink); padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.85em; }
 
@@ -436,6 +444,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .sd-service-arrow { display: none; }
 }
 @media (max-width: 575.98px) {
+  .sd-member-head { gap: 0.9rem; }
+  .sd-member-head .sd-portrait { width: 68px; height: 68px; flex-basis: 68px; font-size: 1.25rem; }
+  .sd-member-actions { grid-template-columns: 1fr; }
   .sd-svc-cols { grid-template-columns: 1fr; }
   .sd-steps, .sd-deliv-grid { grid-template-columns: 1fr; }
   :root { --section-pad: 3.8rem; }

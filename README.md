@@ -45,6 +45,18 @@ désaturées en N&B. Aucune photo de personne utilisée.
 - Le formulaire **n'envoie rien** : ouvre `wa.me` pré-rempli (**confirmation dans WhatsApp**)
   ou un `mailto:` de repli. Aucun faux succès.
 
+## Déploiement Vercel
+
+Dossier lié au projet `ssm10/monprofile` (domaine `monprofile-beta.vercel.app`).
+Redéployer après chaque modification :
+
+```powershell
+# Depuis securedev-studio/ (CLI connectée : smaili-ahmed, scope ssm10) :
+vercel --prod --yes
+```
+
+Anti-cache : `?v=6` sur CSS/JS (à incrémenter à chaque refonte).
+
 ## Personnalisation (`js/main.js` → `SITE_CONFIG`)
 
 `linkedinAhmedUrl`, `linkedinDahiUrl`, `whatsappNumber` ⚠️, `contactEmail`
