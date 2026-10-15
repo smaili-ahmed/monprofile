@@ -6,9 +6,8 @@
  * ============================================================
  * - Les URLs LinkedIn ci-dessous sont les profils EXACTS fournis
  *   (ne pas les remplacer par d'autres profils homonymes).
- * - whatsappNumber : numéro WhatsApp au format international,
- *   SANS "+" ni espaces (ex. Maroc : "2126XXXXXXXX").
- *   Valeur actuelle = EMPLACEMENT À CONFIGURER.
+  * - whatsappNumber : numéro WhatsApp au format international (+212 721903461),
+  *   SANS "+" ni espaces (ex. Maroc : "2126XXXXXXXX").
  * - contactEmail : aucune adresse réelle fournie → emplacement
  *   à configurer (domaine réservé ".example" = aucune boîte réelle).
  * - videoBg.enabled = false → fonds statiques (posters) partout.
@@ -18,8 +17,8 @@ const SITE_CONFIG = {
   // l'accès direct LinkedIn bloque les visiteurs non connectés — code 999).
   linkedinAhmedUrl: "https://www.linkedin.com/in/ahmed-smaili-bb48883aa/",
   linkedinDahiUrl: "https://www.linkedin.com/in/dahi-mohammed-567b962b5/",
-  // Numéro WhatsApp — À CONFIGURER (format international, sans "+" ni espaces).
-  whatsappNumber: "212600000000",
+  // Numéro WhatsApp — configuré (format international, sans "+" ni espaces).
+  whatsappNumber: "212721903461",
   // Adresse e-mail de contact.
   contactEmail: "smailiahmad937@gmail.com",
   // Texte de disponibilité dans le hero (chaîne vide = masque le badge).
