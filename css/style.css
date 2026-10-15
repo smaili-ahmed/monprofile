@@ -515,6 +515,103 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .sd-cta-black .btn-ink:hover { background: transparent; color: var(--paper); }
 .sd-cta-note { margin-top: 1.4rem; font-size: 0.86rem; color: var(--paper); opacity: 0.55; }
 
+/* ============ ÉQUIPE PREMIUM COLORÉE + FORMULAIRES ANIMÉS ============ */
+.team-hero { position: relative; overflow: hidden; background: #fff; }
+.team-hero-bg .orb { position: absolute; border-radius: 50%; filter: blur(70px); opacity: 0.5; animation: orbFloat 9s ease-in-out infinite; }
+.orb-1 { width: 420px; height: 420px; background: radial-gradient(circle, #a5b4fc, transparent 70%); top: -120px; left: -80px; }
+.orb-2 { width: 380px; height: 380px; background: radial-gradient(circle, #6ee7b7, transparent 70%); top: -60px; right: -60px; animation-delay: -3s !important; }
+.orb-3 { width: 300px; height: 300px; background: radial-gradient(circle, #fcd34d, transparent 70%); bottom: -140px; left: 40%; opacity: 0.35 !important; animation-delay: -6s !important; }
+@keyframes orbFloat { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-24px) scale(1.06); } }
+.team-gradient-text { background: linear-gradient(90deg, #4f46e5, #7c3aed, #06b6d4, #10b981); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.team-hero-badges { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.4rem; }
+.team-pill { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.85rem; font-weight: 600; border: 1px solid var(--line); border-radius: 999px; padding: 0.45rem 1rem; background: #fff; box-shadow: 0 6px 20px rgba(23,23,23,0.06); }
+.team-pill i { color: #4f46e5; }
+.team-pill--live { background: #171717; color: #fff; border-color: #171717; }
+.live-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; animation: pulse 1.8s infinite; }
+
+.team-section { background: linear-gradient(180deg, #fff 0%, #f6f7ff 45%, #f0fdf7 100%); }
+.team-card { border-radius: 24px; overflow: hidden; background: #fff; border: 1px solid var(--line); box-shadow: 0 20px 60px rgba(23,23,23,0.08); transition: transform 0.35s ease, box-shadow 0.35s ease; position: relative; display: flex; flex-direction: column; }
+.team-card::before { content: ""; position: absolute; inset: 0; border-radius: 24px; padding: 2px; background: linear-gradient(135deg, var(--g1), var(--g2), var(--g3)); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0; transition: opacity 0.35s ease; pointer-events: none; }
+.team-card:hover { transform: translateY(-10px) scale(1.01); box-shadow: 0 34px 80px rgba(23,23,23,0.16); }
+.team-card:hover::before { opacity: 1; }
+.team-card--dahi { --g1: #059669; --g2: #0ea5e9; --g3: #22d3ee; --accent: #059669; --accent2: #0ea5e9; --soft: #ecfdf5; }
+.team-card--ahmed { --g1: #4f46e5; --g2: #7c3aed; --g3: #06b6d4; --accent: #4f46e5; --accent2: #7c3aed; --soft: #eef2ff; }
+
+.team-banner { position: relative; padding: 1.4rem 1.4rem 3.4rem; background: linear-gradient(135deg, var(--g1), var(--g2) 55%, var(--g3)); overflow: hidden; }
+.team-banner-pattern { position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.28) 1.5px, transparent 1.5px); background-size: 22px 22px; animation: patternSlide 14s linear infinite; }
+@keyframes patternSlide { to { background-position: 44px 44px; } }
+.team-banner::after { content: ""; position: absolute; bottom: -1px; left: 0; right: 0; height: 34px; background: #fff; border-radius: 24px 24px 0 0; }
+.team-avail { position: relative; z-index: 2; display: inline-flex; align-items: center; gap: 0.45rem; background: rgba(255,255,255,0.92); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border-radius: 999px; padding: 0.35rem 0.85rem; color: #171717; }
+.pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; animation: pulse 1.8s infinite; }
+.team-focus { position: relative; z-index: 2; float: right; color: #fff; font-size: 0.8rem; font-weight: 600; background: rgba(0,0,0,0.28); border: 1px solid rgba(255,255,255,0.35); padding: 0.35rem 0.85rem; border-radius: 999px; backdrop-filter: blur(6px); }
+.team-avatar-wrap { position: absolute; z-index: 3; left: 1.6rem; bottom: 0.4rem; }
+.team-avatar { width: 92px; height: 92px; border-radius: 28px; display: flex; align-items: center; justify-content: center; font-family: var(--font-title); font-weight: 800; font-size: 1.9rem; color: #fff; background: rgba(0,0,0,0.35); border: 3px solid #fff; box-shadow: 0 14px 34px rgba(0,0,0,0.3); backdrop-filter: blur(4px); animation: avatarFloat 4.5s ease-in-out infinite; }
+@keyframes avatarFloat { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-7px) rotate(1deg); } }
+.team-avatar-badge { position: absolute; right: -8px; bottom: -4px; font-size: 1.6rem; color: #fff; background: var(--accent); border-radius: 50%; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; border: 2px solid #fff; animation: badgePop 2.6s ease-in-out infinite; }
+@keyframes badgePop { 0%,100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+
+.team-body { padding: 1.2rem 1.5rem 1.5rem; display: flex; flex-direction: column; flex: 1; }
+.team-loc { font-size: 0.82rem; color: var(--mut); margin: 0.2rem 0 0.2rem 6.2rem; }
+.team-name { font-size: 1.65rem; font-weight: 800; margin: 0.4rem 0 0.2rem; }
+.team-role { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.86rem; font-weight: 700; color: #fff; background: linear-gradient(90deg, var(--g1), var(--g2)); padding: 0.45rem 1rem; border-radius: 999px; margin: 0.3rem 0 0.8rem; width: fit-content; box-shadow: 0 8px 22px color-mix(in srgb, var(--accent) 35%, transparent); }
+.team-desc { color: var(--ink-soft); font-size: 0.94rem; margin-bottom: 1rem; }
+.team-sec-title { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin: 1rem 0 0.7rem; display: flex; align-items: center; gap: 0.5rem; }
+.team-sec-title::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--accent), transparent); }
+
+.skill { margin-bottom: 0.65rem; }
+.skill-top { display: flex; justify-content: space-between; font-size: 0.86rem; font-weight: 600; margin-bottom: 0.3rem; }
+.skill-top b { color: var(--accent); }
+.skill-bar { height: 9px; border-radius: 999px; background: var(--mist); overflow: hidden; position: relative; }
+.skill-bar span { display: block; height: 100%; width: 0; border-radius: 999px; background: linear-gradient(90deg, var(--g1), var(--g2), var(--g3)); background-size: 200% 100%; animation: shimmer 2.5s linear infinite; transition: width 1.2s cubic-bezier(0.22,1,0.36,1); }
+@keyframes shimmer { to { background-position: 200% 0; } }
+
+.team-edu { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; }
+.team-edu li { font-size: 0.88rem; color: var(--ink-soft); background: var(--soft); border: 1px dashed color-mix(in srgb, var(--accent) 40%, #fff); padding: 0.55rem 0.85rem; border-radius: 12px; }
+.team-edu li i { color: var(--accent); margin-right: 0.4rem; }
+.team-edu em { color: var(--mut); font-size: 0.78rem; }
+
+.team-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; margin: 1.1rem 0; }
+.team-stats > div { text-align: center; background: #171717; color: #fff; border-radius: 14px; padding: 0.7rem 0.3rem; position: relative; overflow: hidden; transition: transform 0.25s ease; }
+.team-stats > div:hover { transform: translateY(-3px) scale(1.03); }
+.team-stats > div::after { content: ""; position: absolute; top: 0; left: -60%; width: 40%; height: 100%; background: linear-gradient(100deg, transparent, rgba(255,255,255,0.35), transparent); animation: shine 3.2s ease-in-out infinite; }
+@keyframes shine { 0% { left: -60%; } 55%,100% { left: 130%; } }
+.team-stats strong { display: block; font-size: 1.25rem; }
+.team-stats small { opacity: 0.7; font-size: 0.75rem; }
+
+.team-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin: 0.4rem 0 1rem; }
+.team-btn { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; font-weight: 700; font-size: 0.88rem; padding: 0.75rem 0.8rem; text-decoration: none; transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease; }
+.team-btn--dark { background: #171717; color: #fff; border: 1px solid #171717; }
+.team-btn--dark:hover { background: linear-gradient(90deg, var(--g1), var(--g2)); border-color: transparent; color: #fff; transform: translateY(-2px); box-shadow: 0 12px 26px color-mix(in srgb, var(--accent) 40%, transparent); }
+.team-btn--ghost { background: #fff; color: #171717; border: 1px solid var(--line); }
+.team-btn--ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+/* Formulaires individuels colorés */
+.team-form { border-radius: 18px; padding: 1.2rem; background: linear-gradient(180deg, var(--soft), #fff 70%); border: 1px solid color-mix(in srgb, var(--accent) 25%, #fff); position: relative; overflow: hidden; }
+.team-form::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--g1), var(--g2), var(--g3)); background-size: 200% 100%; animation: shimmer 3s linear infinite; }
+.team-form-title { font-size: 1rem; font-weight: 800; display: flex; align-items: center; gap: 0.6rem; margin: 0 0 0.8rem; }
+.team-form-title small { font-weight: 500; color: var(--mut); font-size: 0.78rem; }
+.team-form-ico { width: 36px; height: 36px; flex: 0 0 36px; display: inline-flex; align-items: center; justify-content: center; border-radius: 12px; color: #fff; background: linear-gradient(135deg, var(--g1), var(--g2)); animation: avatarFloat 4s ease-in-out infinite; }
+.team-form input, .team-form textarea { width: 100%; border: 1.5px solid var(--line); border-radius: 12px; padding: 0.65rem 0.9rem; font-size: 0.9rem; background: #fff; transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; }
+.team-form input:focus, .team-form textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent); transform: translateY(-1px); }
+.team-form textarea { margin-top: 0.5rem; resize: vertical; min-height: 84px; }
+.team-form input.shake, .team-form textarea.shake { animation: shake 0.4s ease; border-color: #dc2626; }
+@keyframes shake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-6px); } 50% { transform: translateX(6px); } 75% { transform: translateX(-4px); } }
+.team-form-btns { display: flex; gap: 0.6rem; margin-top: 0.7rem; }
+.team-send { flex: 1; border: none; border-radius: 999px; padding: 0.8rem; font-weight: 800; color: #fff; background: linear-gradient(90deg, var(--g1), var(--g2)); background-size: 150% 100%; transition: background-position 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease; cursor: pointer; }
+.team-send:hover { background-position: 100% 0; transform: translateY(-2px); box-shadow: 0 14px 30px color-mix(in srgb, var(--accent) 45%, transparent); }
+.team-mailbtn { width: 52px; flex: 0 0 52px; border-radius: 50%; border: 1.5px solid var(--accent); background: #fff; color: var(--accent); font-size: 1.1rem; cursor: pointer; transition: all 0.25s ease; }
+.team-mailbtn:hover { background: var(--accent); color: #fff; transform: translateY(-2px) rotate(-8deg); }
+.team-status { font-size: 0.83rem; margin: 0.6rem 0 0; min-height: 1.2em; color: var(--ink-soft); }
+.team-status.success { color: var(--accent); font-weight: 700; animation: statusIn 0.4s ease; }
+@keyframes statusIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 575.98px) {
+  .team-actions { grid-template-columns: 1fr; }
+  .team-focus { display: none; }
+  .team-loc { margin-left: 0; margin-top: 3.2rem; }
+  .team-avatar-wrap { bottom: 1.8rem; }
+}
+
 /* ---------- prefers-reduced-motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

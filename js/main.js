@@ -337,6 +337,78 @@ const SITE_CONFIG = {
     }
   }
 
+  /* ---------- 8b. Équipe : barres de compétences + formulaires individuels ---------- */
+  function initTeamSkills() {
+    var skills = document.querySelectorAll(".team-card .skill");
+    if (!skills.length) return;
+    var animate = function (el) {
+      var bar = el.querySelector(".skill-bar span");
+      var level = parseInt(el.getAttribute("data-level") || "80", 10);
+      if (bar) requestAnimationFrame(function () { bar.style.width = level + "%"; });
+    };
+    if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+      skills.forEach(animate);
+      return;
+    }
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) { animate(entry.target); obs.unobserve(entry.target); }
+      });
+    }, { threshold: 0.4 });
+    skills.forEach(function (s) { obs.observe(s); });
+  }
+
+  function initTeamForms() {
+    document.querySelectorAll(".team-form").forEach(function (form) {
+      var member = form.getAttribute("data-member") || "SecureDev Studio";
+      var status = form.querySelector(".team-status");
+      var say = function (txt, ok) {
+        if (status) {
+          status.textContent = txt;
+          status.classList.toggle("success", !!ok);
+        }
+      };
+      var getData = function () {
+        return {
+          name: (form.querySelector('[name="name"]') || {}).value || "",
+          email: (form.querySelector('[name="email"]') || {}).value || "",
+          message: (form.querySelector('[name="message"]') || {}).value || "",
+        };
+      };
+      var valid = function () {
+        var ok = true;
+        form.querySelectorAll("[required]").forEach(function (f) {
+          f.classList.remove("shake");
+          if (!f.value.trim() || (f.type === "email" && f.value && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.value))) {
+            ok = false;
+            f.classList.add("shake");
+            setTimeout(function () { f.classList.remove("shake"); }, 450);
+          }
+        });
+        return ok;
+      };
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (!valid()) { say("Veuillez remplir votre nom et votre message.", false); return; }
+        var d = getData();
+        var msg = ["Bonjour " + member + ",", "", "Je m'appelle " + d.name + (d.email ? " (" + d.email + ")" : "") + ".", "", d.message].join("\n");
+        window.open("https://wa.me/" + SITE_CONFIG.whatsappNumber + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
+        say("WhatsApp ouvert vers " + member + " — validez l'envoi !", true);
+      });
+      var mailBtn = form.querySelector("[data-team-mail]");
+      if (mailBtn) {
+        mailBtn.addEventListener("click", function () {
+          if (!valid()) { say("Veuillez remplir votre nom et votre message.", false); return; }
+          var d = getData();
+          var subject = "[Contact " + member + "] Message de " + d.name;
+          var body = ["Bonjour " + member + ",", "", d.message, "", "— " + d.name + (d.email ? " (" + d.email + ")" : "")].join("\n");
+          window.location.href = "mailto:" + SITE_CONFIG.contactEmail + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+          say("Messagerie ouverte vers " + member + " !", true);
+        });
+      }
+    });
+  }
+
   /* ---------- 8. Année auto + retour en haut ---------- */
   function initFooter() {
     var year = document.getElementById("year");
@@ -361,6 +433,8 @@ const SITE_CONFIG = {
     initServicePrefill();
     initWaService();
     initDemoForm();
+    initTeamSkills();
+    initTeamForms();
     initFooter();
   });
 })();
