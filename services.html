@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=7" />
+  <link rel="stylesheet" href="css/style.css?v=8" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23171717'/%3E%3Cpath d='M16 6l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V9z' fill='none' stroke='%23FFFFFF' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E" />
 </head>
 <body data-page="services">
@@ -44,8 +44,19 @@
 
   <main id="contenu">
     <!-- ============ HERO SERVICES ============ -->
-    <section class="sd-hero" aria-labelledby="hero-title">
-      <div class="container">
+    <section class="sd-hero svc-hero" aria-labelledby="hero-title">
+      <div class="svc-animated-bg" aria-hidden="true">
+        <span class="svc-orb svc-orb--1"></span>
+        <span class="svc-orb svc-orb--2"></span>
+        <span class="svc-orb svc-orb--3"></span>
+        <span class="svc-grid"></span>
+        <span class="svc-particle svc-particle--1"></span>
+        <span class="svc-particle svc-particle--2"></span>
+        <span class="svc-particle svc-particle--3"></span>
+        <span class="svc-particle svc-particle--4"></span>
+        <span class="svc-particle svc-particle--5"></span>
+      </div>
+      <div class="container position-relative">
         <div class="sd-hero-grid">
           <div>
             <p class="sd-section-label reveal">Our services</p>
@@ -87,8 +98,13 @@
     </section>
 
     <!-- ============ NOS SERVICES ============ -->
-    <section class="sd-section sd-section--cream" id="services-list" aria-labelledby="services-title">
-      <div class="container">
+    <section class="sd-section sd-section--cream svc-list-section" id="services-list" aria-labelledby="services-title">
+      <div class="svc-animated-bg svc-animated-bg--soft" aria-hidden="true">
+        <span class="svc-orb svc-orb--1"></span>
+        <span class="svc-orb svc-orb--2"></span>
+        <span class="svc-grid"></span>
+      </div>
+      <div class="container position-relative">
         <p class="sd-kicker reveal">Prestations</p>
         <h2 id="services-title" class="sd-h2 reveal">Six services, des périmètres honnêtes.</h2>
         <p class="sd-section-intro reveal">Seules les prestations correspondant à nos compétences vérifiées sont publiées. Chaque périmètre se définit avec vous avant tout engagement. Les vérifications de sécurité sont des <strong>revues de bonnes pratiques</strong> : elles ne garantissent pas l'absence de vulnérabilités.</p>
@@ -180,7 +196,7 @@
                   <ul class="sd-tags"><li>TCP/IP</li><li>LAN / Wi-Fi</li><li>Linux</li><li>Diagnostic</li></ul>
                 </div>
               </div>
-              <p class="sd-ref">Référent : <strong>Ahmed Smaili</strong> (technicien spécialisé en réseaux informatiques, profil public).</p>
+              <p class="sd-ref">Référent : <strong>Ahmed Smaili</strong> (expérience pratique, sans diplôme spécifique revendiqué).</p>
               <div class="sd-svc-cta">
                 <a class="btn-ink" data-wa-service="Réseaux informatiques" href="contact.html"><i class="bi bi-whatsapp me-1" aria-hidden="true"></i>Discuter de ce service</a>
               </div>
@@ -223,7 +239,7 @@
                 <ul class="sd-tags"><li>Checklist adaptée</li><li>Constats priorisés</li><li>Recommandations concrètes</li><li>Compte rendu écrit</li><li>Conseils de correction</li></ul>
               </div>
               <p class="svc-limit"><i class="bi bi-info-circle" aria-hidden="true"></i> <strong>Cadre :</strong> vérifications uniquement avec l'autorisation explicite du propriétaire. Tests d'intrusion, audits certifiés, conformité, surveillance 24/7 et garanties d'absence de failles <strong>non inclus</strong> par défaut. Aucun test intrusif sans autorisation.</p>
-              <p class="sd-ref">Référent : <strong>Dahi Mohammed</strong> (profil sécurité, profil public). Pas de surveillance 24/7 ni de certification de conformité.</p>
+              <p class="sd-ref">Référent : <strong>Dahi Mohammed</strong> (diplômé Technicien Spécialisé en Développement Informatique). Pas de surveillance 24/7 ni de certification de conformité.</p>
               <div class="sd-svc-cta">
                 <a class="btn-ink" data-wa-service="Cybersécurité web — revue de bonnes pratiques" href="contact.html"><i class="bi bi-whatsapp me-1" aria-hidden="true"></i>Discuter de ce service</a>
                 <a class="btn-outline" href="#securite-web">Détail sécurité</a>
@@ -402,32 +418,43 @@
     </section>
 
     <!-- ============ DEUX PROFILS ============ -->
-    <section class="sd-section sd-section--white" id="profils" aria-labelledby="profils-title">
-      <div class="container">
+    <section class="sd-section sd-section--white svc-profils-section" id="profils" aria-labelledby="profils-title">
+      <div class="svc-animated-bg svc-animated-bg--soft" aria-hidden="true">
+        <span class="svc-orb svc-orb--2"></span>
+        <span class="svc-orb svc-orb--3"></span>
+        <span class="svc-grid"></span>
+      </div>
+      <div class="container position-relative">
         <p class="sd-kicker reveal">L'équipe derrière l'offre</p>
         <h2 id="profils-title" class="sd-h2 reveal">Deux profils complémentaires pour vos projets web et sécurité.</h2>
-        <p class="sd-section-intro reveal">Sur un même projet web, nous associons <strong>développement</strong>, <strong>fonctionnement du site</strong> et <strong>bonnes pratiques de sécurité</strong> — chacun dans la limite de ses compétences vérifiées, sans certifications ni références inventées.</p>
+        <p class="sd-section-intro reveal">Même base de compétences <strong>développement web</strong> pour vos projets — avec deux parcours différents : <strong>Dahi Mohammed, diplômé Technicien Spécialisé en Développement Informatique</strong>, et <strong>Ahmed Smaili, expérience pratique en développement</strong> sans diplôme spécifique revendiqué. Sur un même projet, nous associons développement, fonctionnement du site et bonnes pratiques de sécurité.</p>
         <div class="row g-4 mt-3">
           <div class="col-lg-6">
-            <article class="profile-card reveal h-100">
+            <article class="profile-card profile-card--ahmed reveal h-100">
+              <div class="profile-banner" aria-hidden="true"><span class="profile-shine"></span></div>
               <div class="profile-top">
                 <span class="profile-avatar" aria-hidden="true">AS</span>
                 <div>
-                  <h3>Ahmed Smaili</h3>
-                  <p class="profile-role"><i class="bi bi-code-slash" aria-hidden="true"></i> Développement web · Réseaux informatiques</p>
+                  <h3>Ahmed Smaili <span class="profile-exp-badge profile-exp-badge--xp"><i class="bi bi-briefcase-fill" aria-hidden="true"></i> Expérience</span></h3>
+                  <p class="profile-role"><i class="bi bi-code-slash" aria-hidden="true"></i> Développement web · Bonnes pratiques sécurité</p>
                 </div>
+              </div>
+              <div class="profile-parcours profile-parcours--xp">
+                <h4><i class="bi bi-briefcase" aria-hidden="true"></i> Parcours</h4>
+                <p><strong>Expérience pratique en développement informatique</strong> — sans diplôme spécifique revendiqué. Compétences acquises par la pratique : création et amélioration de sites et d'interfaces web.</p>
               </div>
               <ul class="sd-check">
                 <li><i class="bi bi-check2" aria-hidden="true"></i>Création et amélioration d'interfaces web avec HTML, CSS, JavaScript et Bootstrap</li>
                 <li><i class="bi bi-check2" aria-hidden="true"></i>Adaptation responsive des sites web</li>
                 <li><i class="bi bi-check2" aria-hidden="true"></i>Organisation et maintenance du code front-end</li>
                 <li><i class="bi bi-check2" aria-hidden="true"></i>Principes de développement web sécurisé</li>
-                <li><i class="bi bi-check2" aria-hidden="true"></i>Sensibilisation aux bonnes pratiques de configuration et de connectivité réseau</li>
+                <li><i class="bi bi-check2" aria-hidden="true"></i>Bonnes pratiques de configuration et de connectivité</li>
               </ul>
               <div class="profile-security">
                 <h4><i class="bi bi-shield-check" aria-hidden="true"></i> Contribution à la sécurité web</h4>
                 <p>La sécurité est prise en compte dès la conception de l'interface et du code : validation des entrées, réduction des erreurs courantes, gestion prudente des informations affichées et application des bonnes pratiques adaptées au périmètre du projet.</p>
               </div>
+              <ul class="sd-tags"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Bootstrap 5</li><li>Git</li></ul>
               <div class="sd-svc-cta">
                 <a class="btn-outline" data-linkedin="ahmed" href="https://www.linkedin.com/in/ahmed-smaili-bb48883aa/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin me-1" aria-hidden="true"></i>LinkedIn d'Ahmed</a>
                 <a class="btn-ink" data-wa-service="Projet web avec Ahmed Smaili" href="contact.html"><i class="bi bi-whatsapp me-1" aria-hidden="true"></i>Travailler avec Ahmed</a>
@@ -435,29 +462,34 @@
             </article>
           </div>
           <div class="col-lg-6">
-            <article class="profile-card reveal h-100">
+            <article class="profile-card profile-card--dahi reveal h-100">
+              <div class="profile-banner" aria-hidden="true"><span class="profile-shine"></span></div>
               <div class="profile-top">
                 <span class="profile-avatar" aria-hidden="true">DM</span>
                 <div>
-                  <h3>Dahi Mohammed</h3>
-                  <p class="profile-role"><i class="bi bi-shield-lock" aria-hidden="true"></i> Cybersécurité · Sécurisation des environnements</p>
+                  <h3>Dahi Mohammed <span class="profile-exp-badge profile-exp-badge--diploma"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i> Diplômé</span></h3>
+                  <p class="profile-role"><i class="bi bi-code-slash" aria-hidden="true"></i> Développement web · Bonnes pratiques sécurité</p>
                 </div>
               </div>
+              <div class="profile-parcours profile-parcours--diploma">
+                <h4><i class="bi bi-mortarboard" aria-hidden="true"></i> Parcours</h4>
+                <p><strong>Diplômé Technicien Spécialisé en Développement Informatique.</strong> Formation validée : conception et réalisation d'applications et de sites web, organisation et maintenance du code.</p>
+              </div>
               <ul class="sd-check">
-                <li><i class="bi bi-check2" aria-hidden="true"></i>Bonnes pratiques de sécurité des applications web</li>
-                <li><i class="bi bi-check2" aria-hidden="true"></i>Identification et compréhension des risques courants</li>
-                <li><i class="bi bi-check2" aria-hidden="true"></i>Sensibilisation à la protection des données et des accès</li>
-                <li><i class="bi bi-check2" aria-hidden="true"></i>Recommandations de sécurisation des configurations</li>
-                <li><i class="bi bi-check2" aria-hidden="true"></i>Documentation des constats et mesures correctives</li>
-                <li><i class="bi bi-check2" aria-hidden="true"></i>Notions de sécurité systèmes et réseaux, dans la limite des compétences maîtrisées</li>
+                <li><i class="bi bi-check2" aria-hidden="true"></i>Création et amélioration d'interfaces web avec HTML, CSS, JavaScript et Bootstrap</li>
+                <li><i class="bi bi-check2" aria-hidden="true"></i>Adaptation responsive des sites web</li>
+                <li><i class="bi bi-check2" aria-hidden="true"></i>Organisation et maintenance du code front-end</li>
+                <li><i class="bi bi-check2" aria-hidden="true"></i>Principes de développement web sécurisé</li>
+                <li><i class="bi bi-check2" aria-hidden="true"></i>Bonnes pratiques de configuration et de connectivité</li>
               </ul>
               <div class="profile-security">
                 <h4><i class="bi bi-shield-check" aria-hidden="true"></i> Contribution à la sécurité web</h4>
-                <p>Approche préventive : compréhension des risques, vérification des configurations accessibles et autorisées, recommandations de correction et aide à l'adoption de pratiques de développement plus sûres.</p>
+                <p>La sécurité est prise en compte dès la conception de l'interface et du code : validation des entrées, réduction des erreurs courantes, gestion prudente des informations affichées et application des bonnes pratiques adaptées au périmètre du projet.</p>
               </div>
+              <ul class="sd-tags"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Bootstrap 5</li><li>Git</li></ul>
               <div class="sd-svc-cta">
                 <a class="btn-outline" data-linkedin="dahi" href="https://www.linkedin.com/in/dahi-mohammed-567b962b5/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin me-1" aria-hidden="true"></i>LinkedIn de Dahi</a>
-                <a class="btn-ink" data-wa-service="Revue sécurité avec Dahi Mohammed" href="contact.html"><i class="bi bi-whatsapp me-1" aria-hidden="true"></i>Travailler avec Dahi</a>
+                <a class="btn-ink" data-wa-service="Projet web avec Dahi Mohammed" href="contact.html"><i class="bi bi-whatsapp me-1" aria-hidden="true"></i>Travailler avec Dahi</a>
               </div>
             </article>
           </div>
@@ -559,6 +591,6 @@
   </a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="js/main.js?v=7"></script>
+  <script src="js/main.js?v=8"></script>
 </body>
 </html>
