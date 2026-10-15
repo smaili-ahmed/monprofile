@@ -17,7 +17,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css?v=6" />
+  <link rel="stylesheet" href="css/style.css?v=8" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23171717'/%3E%3Cpath d='M16 6l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V9z' fill='none' stroke='%23FFFFFF' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E" />
 </head>
 <body data-page="index">
@@ -50,8 +50,19 @@
 
   <main id="contenu">
     <!-- ============ HERO ÉDITORIAL ============ -->
-    <section class="sd-hero" aria-labelledby="hero-title">
-      <div class="container">
+    <section class="sd-hero svc-hero home-hero" aria-labelledby="hero-title">
+      <div class="svc-animated-bg" aria-hidden="true">
+        <span class="svc-orb svc-orb--1"></span>
+        <span class="svc-orb svc-orb--2"></span>
+        <span class="svc-orb svc-orb--3"></span>
+        <span class="svc-grid"></span>
+        <span class="svc-particle svc-particle--1"></span>
+        <span class="svc-particle svc-particle--2"></span>
+        <span class="svc-particle svc-particle--3"></span>
+        <span class="svc-particle svc-particle--4"></span>
+        <span class="svc-particle svc-particle--5"></span>
+      </div>
+      <div class="container position-relative">
         <div class="sd-hero-grid">
           <div>
             <p class="sd-section-label reveal">Studio digital — Oujda, Maroc</p>
@@ -59,10 +70,10 @@
               <span class="sd-dot" aria-hidden="true"></span>
               <span id="availabilityText">Disponibles pour de nouvelles missions</span>
             </p>
-            <h1 id="hero-title" class="sd-hero-title reveal">
-              Digital solutions.<br />
-              Thoughtful design.<br />
-              <span class="sd-thin">Secure technology.</span>
+            <h1 id="hero-title" class="sd-hero-title home-title reveal">
+              <span class="home-word home-word--1">Digital solutions.</span><br />
+              <span class="home-word home-word--2">Thoughtful design.</span><br />
+              <span class="home-word home-word--3">Secure technology.</span>
             </h1>
             <p class="sd-lead reveal">
               Nous réunissons le développement web et les compétences techniques pour concevoir
@@ -71,6 +82,12 @@
             <div class="sd-hero-ctas reveal">
               <a href="portfolio.html" class="btn-ink">Explorer nos projets</a>
               <a href="contact.html" class="btn-outline">Parlons de votre projet</a>
+            </div>
+            <div class="home-techs reveal" aria-label="Technologies principales">
+              <span><i class="bi bi-filetype-html" aria-hidden="true"></i>HTML5</span>
+              <span><i class="bi bi-filetype-css" aria-hidden="true"></i>CSS3</span>
+              <span><i class="bi bi-filetype-js" aria-hidden="true"></i>JavaScript</span>
+              <span><i class="bi bi-bootstrap" aria-hidden="true"></i>Bootstrap</span>
             </div>
             <a href="#apropos" class="sd-scroll-cue reveal" aria-label="Faire défiler vers la présentation">Scroll</a>
           </div>
@@ -114,7 +131,7 @@
           </div>
           <div class="col-lg-8">
             <h2 id="apropos-title" class="sd-h2 reveal">La bonne idée ne suffit pas. Il faut aussi bien la construire.</h2>
-            <p class="sd-section-intro reveal"><strong>SecureDev Studio</strong>, c'est la collaboration d'<strong>Ahmed Smaili</strong> et de <strong>Dahi Mohammed</strong> : deux profils issus du cycle ingénieur en cybersécurité à l'ESIAI d'Oujda, unis par le goût du travail bien fait — sites clairs, rapides et entretenus avec sérieux.</p>
+            <p class="sd-section-intro reveal"><strong>SecureDev Studio</strong>, c'est la collaboration d'<strong>Ahmed Smaili</strong> et de <strong>Dahi Mohammed</strong> : deux profils développement web basés à Oujda — <strong>Dahi, diplômé Technicien Spécialisé en Développement Informatique</strong>, et <strong>Ahmed, expérience pratique en développement</strong> — unis par le goût du travail bien fait : sites clairs, rapides et entretenus avec sérieux.</p>
             <a href="a-propos.html" class="sd-link reveal">Lire notre histoire <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
           </div>
         </div>
@@ -126,28 +143,28 @@
       <div class="container">
         <p class="sd-kicker reveal">Expertises</p>
         <h2 id="exp-title" class="sd-h2 reveal">Ce que nous maîtrisons.</h2>
-        <div class="sd-exp-grid">
+        <div class="sd-exp-grid home-exp-grid">
           <article class="sd-exp reveal">
             <span class="sd-exp-num" aria-hidden="true">01</span>
-            <span class="sd-exp-icon" aria-hidden="true"><i class="bi bi-code-slash"></i></span>
+            <span class="sd-exp-icon home-exp-icon home-exp-icon--blue" aria-hidden="true"><i class="bi bi-code-slash"></i></span>
             <h3>Développement web</h3>
             <p>HTML, CSS, JavaScript. Des pages modernes et rapides.</p>
           </article>
           <article class="sd-exp reveal">
             <span class="sd-exp-num" aria-hidden="true">02</span>
-            <span class="sd-exp-icon" aria-hidden="true"><i class="bi bi-phone"></i></span>
+            <span class="sd-exp-icon home-exp-icon home-exp-icon--violet" aria-hidden="true"><i class="bi bi-phone"></i></span>
             <h3>Interfaces responsive</h3>
             <p>Lisibles sur mobile, tablette et ordinateur.</p>
           </article>
           <article class="sd-exp reveal">
             <span class="sd-exp-num" aria-hidden="true">03</span>
-            <span class="sd-exp-icon" aria-hidden="true"><i class="bi bi-hdd-network"></i></span>
+            <span class="sd-exp-icon home-exp-icon home-exp-icon--teal" aria-hidden="true"><i class="bi bi-hdd-network"></i></span>
             <h3>Réseaux informatiques</h3>
             <p>Infrastructures comprises avant d'être exposées.</p>
           </article>
           <article class="sd-exp reveal">
             <span class="sd-exp-num" aria-hidden="true">04</span>
-            <span class="sd-exp-icon" aria-hidden="true"><i class="bi bi-shield-check"></i></span>
+            <span class="sd-exp-icon home-exp-icon home-exp-icon--amber" aria-hidden="true"><i class="bi bi-shield-check"></i></span>
             <h3>Cybersécurité</h3>
             <p>Bonnes pratiques intégrées dès la conception.</p>
           </article>
@@ -157,28 +174,38 @@
     </section>
 
     <!-- ============ ÉQUIPE (gris très clair) ============ -->
-    <section class="sd-section sd-section--mist" aria-labelledby="team-title">
-      <div class="container">
+    <section class="sd-section sd-section--mist home-team" aria-labelledby="team-title">
+      <div class="svc-animated-bg svc-animated-bg--soft" aria-hidden="true">
+        <span class="svc-orb svc-orb--1"></span>
+        <span class="svc-orb svc-orb--2"></span>
+      </div>
+      <div class="container position-relative">
         <p class="sd-kicker reveal">Notre équipe</p>
-        <h2 id="team-title" class="sd-h2 reveal">Deux collaborateurs, des rôles distincts.</h2>
+        <h2 id="team-title" class="sd-h2 reveal">Deux collaborateurs, <span class="home-gradient-text">une même base web.</span></h2>
         <div class="row g-4 mt-3 justify-content-center">
           <div class="col-md-6 col-lg-5">
-            <article class="sd-card sd-member reveal h-100">
-              <div class="sd-portrait" role="img" aria-label="Monogramme de Dahi Mohammed — portrait à ajouter">DM</div>
-              <p class="sd-card-tag">Oujda, Maroc · ESIAI Oujda</p>
+            <article class="sd-card sd-member home-member home-member--dahi reveal h-100">
+              <div class="home-member-top">
+                <div class="sd-portrait home-portrait" role="img" aria-label="Monogramme de Dahi Mohammed — portrait à ajouter">DM</div>
+                <span class="profile-exp-badge profile-exp-badge--diploma"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i> Diplômé</span>
+              </div>
+              <p class="sd-card-tag">Oujda, Maroc</p>
               <h3>Dahi Mohammed</h3>
-              <p class="sd-role">Étudiant en cybersécurité · Sécurité réseaux &amp; systèmes</p>
-              <p class="sd-card-desc">Réseaux, systèmes, Python, notions d'ethical hacking et de détection d'intrusion.</p>
+              <p class="sd-role">Diplômé Technicien Spécialisé · Développement Informatique</p>
+              <p class="sd-card-desc">Développement web : interfaces HTML, CSS, JavaScript et Bootstrap, code organisé et bonnes pratiques de sécurité.</p>
               <a class="sd-link" data-linkedin="dahi" href="https://www.linkedin.com/in/dahi-mohammed-567b962b5/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin" aria-hidden="true"></i>Voir LinkedIn</a>
             </article>
           </div>
           <div class="col-md-6 col-lg-5">
-            <article class="sd-card sd-member reveal h-100">
-              <div class="sd-portrait" role="img" aria-label="Monogramme d'Ahmed Smaili — portrait à ajouter">AS</div>
-              <p class="sd-card-tag">Oujda, Maroc · ESIAI</p>
+            <article class="sd-card sd-member home-member home-member--ahmed reveal h-100">
+              <div class="home-member-top">
+                <div class="sd-portrait home-portrait" role="img" aria-label="Monogramme d'Ahmed Smaili — portrait à ajouter">AS</div>
+                <span class="profile-exp-badge profile-exp-badge--xp"><i class="bi bi-briefcase-fill" aria-hidden="true"></i> Expérience</span>
+              </div>
+              <p class="sd-card-tag">Oujda, Maroc</p>
               <h3>Ahmed Smaili</h3>
-              <p class="sd-role">Cycle ingénieur cybersécurité · Réseaux informatiques</p>
-              <p class="sd-card-desc">Technicien réseaux, en cycle ingénieur cybersécurité : rigueur des infrastructures.</p>
+              <p class="sd-role">Développement web · Expérience pratique (sans diplôme)</p>
+              <p class="sd-card-desc">Expérience pratique : sites responsives, maintenance du code et bonnes pratiques de sécurité dès la conception.</p>
               <a class="sd-link" data-linkedin="ahmed" href="https://www.linkedin.com/in/ahmed-smaili-bb48883aa/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin" aria-hidden="true"></i>Voir LinkedIn</a>
             </article>
           </div>
@@ -192,12 +219,13 @@
     <!-- ============ CONTACT (blanc) ============ -->
     <section class="sd-section sd-section--white" aria-labelledby="cta-title">
       <div class="container">
-        <div class="sd-band-box reveal" style="border:1px solid var(--line)">
-          <div>
+        <div class="sd-band-box home-cta reveal" style="border:1px solid var(--line)">
+          <span class="home-cta-glow" aria-hidden="true"></span>
+          <div class="position-relative">
             <h2 id="cta-title">Have a project in mind?</h2>
             <p>Parlez-nous de votre idée — réponse claire, sans jargon, sans engagement.</p>
           </div>
-          <a href="contact.html" class="btn-ink">Parlons de votre projet</a>
+          <a href="contact.html" class="btn-ink position-relative">Parlons de votre projet</a>
         </div>
       </div>
     </section>
@@ -248,6 +276,6 @@
   </a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="js/main.js?v=6"></script>
+  <script src="js/main.js?v=8"></script>
 </body>
 </html>

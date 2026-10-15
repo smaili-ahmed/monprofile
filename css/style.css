@@ -701,6 +701,40 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .profile-exp-badge { margin-left: 0; margin-top: 0.3rem; }
 }
 
+/* ============ ACCUEIL — couleurs + animations + fond animé ============ */
+.home-hero { position: relative; overflow: hidden; }
+.home-title .home-word { display: inline-block; animation: homeWordIn 0.7s ease both; }
+.home-word--2 { animation-delay: 0.12s !important; }
+.home-word--3 { animation-delay: 0.24s !important; background: linear-gradient(90deg, #1e40af, #7c3aed 45%, #0ea5e9 80%); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: homeWordIn 0.7s ease both, svcShimmer 5s linear infinite !important; }
+@keyframes homeWordIn { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+.home-techs { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.4rem; }
+.home-techs span { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; font-weight: 600; border: 1px solid var(--line); border-radius: 999px; padding: 0.4rem 0.9rem; background: rgba(255,255,255,0.85); backdrop-filter: blur(6px); transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; animation: svcPillIn 0.5s ease both; }
+.home-techs span:nth-child(2) { animation-delay: 0.08s; } .home-techs span:nth-child(3) { animation-delay: 0.16s; } .home-techs span:nth-child(4) { animation-delay: 0.24s; }
+.home-techs span:hover { transform: translateY(-3px); background: var(--ink); color: #fff; }
+.home-techs i { font-size: 1rem; }
+/* Expertises en couleur */
+.home-exp-icon { color: #fff !important; border: none !important; width: 52px !important; height: 52px !important; font-size: 1.4rem !important; box-shadow: 0 12px 26px rgba(23,23,23,0.18); transition: transform 0.3s ease !important; animation: svcAvatarFloat 5s ease-in-out infinite; }
+.home-exp-icon--blue { background: linear-gradient(135deg, #1e40af, #0ea5e9) !important; }
+.home-exp-icon--violet { background: linear-gradient(135deg, #6d28d9, #a855f7) !important; animation-delay: -1.2s !important; }
+.home-exp-icon--teal { background: linear-gradient(135deg, #0c3b2e, #10b981) !important; animation-delay: -2.4s !important; }
+.home-exp-icon--amber { background: linear-gradient(135deg, #b45309, #f59e0b) !important; animation-delay: -3.6s !important; }
+.home-exp-grid .sd-exp:hover .home-exp-icon { transform: scale(1.1) rotate(-8deg) !important; }
+/* Équipe accueil */
+.home-team { position: relative; overflow: hidden; }
+.home-gradient-text { background: linear-gradient(90deg, #1e40af, #7c3aed, #0ea5e9); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.home-member { overflow: hidden; }
+.home-member::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: linear-gradient(90deg, #1e40af, #7c3aed, #0ea5e9, #10b981); background-size: 200% 100%; animation: svcShimmer 4s linear infinite; }
+.home-member-top { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; }
+.home-portrait { margin-bottom: 0 !important; animation: svcAvatarFloat 4.5s ease-in-out infinite; }
+.home-member--dahi .home-portrait { background: linear-gradient(135deg, #0c3b2e, #0ea5e9) !important; color: #fff; border: 1px solid var(--line); }
+.home-member--ahmed .home-portrait { background: linear-gradient(135deg, #1e1b4b, #7c3aed) !important; color: #fff; border: 1px solid var(--line); }
+/* CTA accueil */
+.home-cta { position: relative; overflow: hidden; }
+.home-cta-glow { position: absolute; width: 340px; height: 340px; border-radius: 50%; right: -100px; top: -100px; background: radial-gradient(circle, rgba(124,58,237,0.16), transparent 70%); animation: svcOrbFloat 9s ease-in-out infinite; pointer-events: none; }
+/* Marquee coloré */
+.sd-marquee-track span { background: linear-gradient(90deg, #171717 30%, #4f46e5 50%, #171717 70%); background-size: 200% 100%; -webkit-background-clip: text; background-clip: text; animation: svcShimmer 6s linear infinite; }
+@media (max-width: 575.98px) { .home-techs span { font-size: 0.76rem; } }
+
 /* ---------- prefers-reduced-motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
