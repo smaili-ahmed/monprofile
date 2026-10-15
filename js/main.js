@@ -322,14 +322,15 @@ const SITE_CONFIG = {
         }
         var data = new FormData(form);
         var subject = "[" + (data.get("type") || "Contact") + "] Nouveau besoin — " + (data.get("name") || "");
+        var body = buildMessage(form);
+        setStatus("Ouverture de Gmail… il ne reste qu'à appuyer sur Envoyer dans Gmail.", "success");
+        // Redirection DIRECTE vers la rédaction Gmail (même onglet),
+        // avec destinataire, objet et message déjà remplis.
         window.location.href =
-          "mailto:" + SITE_CONFIG.contactEmail +
-          "?subject=" + encodeURIComponent(subject) +
-          "&body=" + encodeURIComponent(buildMessage(form));
-        setStatus(
-          "Votre messagerie vient de s'ouvrir avec un e-mail pré-rempli — rien n'a été transmis automatiquement.",
-          "success"
-        );
+          "https://mail.google.com/mail/?view=cm&fs=1" +
+          "&to=" + encodeURIComponent(SITE_CONFIG.contactEmail) +
+          "&su=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(body);
       });
     }
   }
@@ -400,8 +401,13 @@ const SITE_CONFIG = {
           var d = getData();
           var subject = "[Contact " + member + "] Message de " + d.name;
           var body = ["Bonjour " + member + ",", "", d.message, "", "— " + d.name + (d.email ? " (" + d.email + ")" : "")].join("\n");
-          window.location.href = "mailto:" + SITE_CONFIG.contactEmail + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-          say("Messagerie ouverte vers " + member + " !", true);
+          say("Ouverture de Gmail vers " + member + "… appuyez sur Envoyer dans Gmail.", true);
+          // Redirection DIRECTE vers la rédaction Gmail (même onglet).
+          window.location.href =
+            "https://mail.google.com/mail/?view=cm&fs=1" +
+            "&to=" + encodeURIComponent(SITE_CONFIG.contactEmail) +
+            "&su=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent(body);
         });
       }
     });
