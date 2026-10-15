@@ -263,11 +263,10 @@ const SITE_CONFIG = {
           "",
           "Pouvons-nous discuter du périmètre du projet ?",
         ].join("\n");
-        window.open(
-          "https://wa.me/" + SITE_CONFIG.whatsappNumber + "?text=" + encodeURIComponent(msg),
-          "_blank",
-          "noopener"
-        );
+        // Redirection DIRECTE vers WhatsApp (même onglet) : sur mobile,
+        // l'application WhatsApp s'ouvre aussitôt avec le message pré-rempli.
+        window.location.href =
+          "https://wa.me/" + SITE_CONFIG.whatsappNumber + "?text=" + encodeURIComponent(msg);
       });
     });
   }
@@ -308,11 +307,10 @@ const SITE_CONFIG = {
       }
       var url = "https://wa.me/" + SITE_CONFIG.whatsappNumber +
         "?text=" + encodeURIComponent(buildMessage(form));
-      window.open(url, "_blank", "noopener");
-      setStatus(
-        "WhatsApp s'est ouvert avec votre message pré-rempli : vérifiez puis envoyez depuis WhatsApp — rien n'a été transmis automatiquement.",
-        "success"
-      );
+      setStatus("Ouverture de WhatsApp… il ne reste qu'à appuyer sur Envoyer dans WhatsApp.", "success");
+      // Redirection DIRECTE (même onglet) : WhatsApp s'ouvre aussitôt
+      // avec le message pré-rempli, sans nouvel onglet ni blocage.
+      window.location.href = url;
     });
 
     var emailBtn = document.getElementById("emailFallback");
@@ -391,8 +389,9 @@ const SITE_CONFIG = {
         if (!valid()) { say("Veuillez remplir votre nom et votre message.", false); return; }
         var d = getData();
         var msg = ["Bonjour " + member + ",", "", "Je m'appelle " + d.name + (d.email ? " (" + d.email + ")" : "") + ".", "", d.message].join("\n");
-        window.open("https://wa.me/" + SITE_CONFIG.whatsappNumber + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
-        say("WhatsApp ouvert vers " + member + " — validez l'envoi !", true);
+        say("Ouverture de WhatsApp vers " + member + "… appuyez sur Envoyer dans WhatsApp.", true);
+        // Redirection DIRECTE (même onglet) vers WhatsApp.
+        window.location.href = "https://wa.me/" + SITE_CONFIG.whatsappNumber + "?text=" + encodeURIComponent(msg);
       });
       var mailBtn = form.querySelector("[data-team-mail]");
       if (mailBtn) {
